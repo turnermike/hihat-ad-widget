@@ -8,7 +8,7 @@ All of the following fields are optional:
  + Target URL
  + Image Alt Text
  + Image
- + Open in a new Window (Boolean)
+ + Open in a new Window, target="_blank" (boolean)
 
 ## To-do
 
