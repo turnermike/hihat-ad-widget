@@ -4,7 +4,7 @@
  *
  * Ad Widget
  *
- * @package   Ad_Widget
+ * @package   Hihat_Ad_Widget
  * @author    Mike Turner <turner.mike@gmail.com>
  * @license   GPL-2.0+
  * @link      http://hi-hatconsulting.com

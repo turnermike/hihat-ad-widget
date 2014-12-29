@@ -2,21 +2,21 @@
 /**
  * Ad Widget
  *
- * @package   Ad_Widget
+ * @package   Hihat_Ad_Widget
  * @author    Mike Turner <turner.mike@gmail.com>
  * @license   GPL-2.0+
  * @link      http://hi-hatconsulting.com
  * @copyright 2014 Hi-hat Consulting
  */
 
-class Ad_Widget_Widget extends WP_Widget{
+class Hihat_Ad_Widget_Widget extends WP_Widget{
 
 	//constructor
-	function Ad_Widget_Widget(){
+	function Hihat_Ad_Widget_Widget(){
 
-		$name = __('Ad Widget', 'ad-widget');
-		$desc = __('A plugin to display ad widgets.', 'ad-widget');
-		$class_name = 'ad-widget';
+		$name = __('Hi-hat Ad Widget', 'hihat-ad-widget');
+		$desc = __('This widget  will allow you to display custom ads on your widget enabled sidebars.', 'hihat-ad-widget');
+		$class_name = 'hihat-ad-widget';
 		parent::WP_Widget(false, $name, array('classname' => $class_name, 'description' => $desc));
 	}
 
@@ -62,22 +62,22 @@ class Ad_Widget_Widget extends WP_Widget{
 
 		<!-- title -->
 		<p>
-		<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'ad-widget'); ?></label>
+		<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'hihat-ad-widget'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 		</p>
 		<!-- desc -->
 		<p>
-		<label for="<?php echo $this->get_field_id('desc'); ?>"><?php _e('Description', 'ad-widget'); ?></label>
+		<label for="<?php echo $this->get_field_id('desc'); ?>"><?php _e('Description', 'hihat-ad-widget'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('desc'); ?>" name="<?php echo $this->get_field_name('desc'); ?>" type="text" value="<?php echo $desc; ?>" />
 		</p>
 		<!-- link target url -->
 		<p>
-		<label for="<?php echo $this->get_field_id('target_url'); ?>"><?php _e('Link Target URL', 'ad-widget'); ?></label>
+		<label for="<?php echo $this->get_field_id('target_url'); ?>"><?php _e('Link Target URL', 'hihat-ad-widget'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('target_url'); ?>" name="<?php echo $this->get_field_name('target_url'); ?>" type="text" value="<?php echo $target_url; ?>" />
 		</p>
 		<!-- alt text -->
 		<p>
-		<label for="<?php echo $this->get_field_id('alt_text'); ?>"><?php _e('Alternate Text', 'ad-widget'); ?></label>
+		<label for="<?php echo $this->get_field_id('alt_text'); ?>"><?php _e('Alternate Text', 'hihat-ad-widget'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('alt_text'); ?>" name="<?php echo $this->get_field_name('alt_text'); ?>" type="text" value="<?php echo $alt_text; ?>" />
 		</p>
 		<!-- image -->
@@ -97,10 +97,10 @@ class Ad_Widget_Widget extends WP_Widget{
 			if($new_window === 'true'){ $checked = ' checked="checked"'; }
 		?>
 		<p>
-		<label for="<?php echo $this->get_field_id('new_window'); ?>"><?php _e('Open Link In New Window', 'zync-button-widget'); ?><br />
+		<label for="<?php echo $this->get_field_id('new_window'); ?>"><?php _e('Open Link In New Window', 'hihat-ad-widget'); ?><br />
 		<input type="checkbox"  id="<?php echo $this->get_field_id('new_window'); ?>" name="<?php echo $this->get_field_name('new_window'); ?>" <?php echo $checked; ?>></label>
 		</p>
-		<p>This widget is used to display custom ad content. The image dimensions are 275 pixels wide, or double that for retina devices (550 pixels).</p>
+		<p>This widget is used to display custom ad content. All fields are optional.</p>
 
 		<?php
 	}
@@ -217,7 +217,7 @@ class Ad_Widget_Widget extends WP_Widget{
 
 }
 
-add_action('widgets_init', create_function('', 'return register_widget("Ad_Widget_Widget");'));
+add_action('widgets_init', create_function('', 'return register_widget("Hihat_Ad_Widget_Widget");'));
 
 
 
@@ -231,10 +231,10 @@ add_action('widgets_init', create_function('', 'return register_widget("Ad_Widge
  *
  * @TODO: Rename this class to a proper name for your plugin.
  *
- * @package Ad_Widget
+ * @package Hihat_Ad_Widget
  * @author  Your Name <email@example.com>
  */
-class Ad_Widget {
+class Hihat_Ad_Widget {
 
 	/**
 	 * Plugin version, used for cache-busting of style and script file references.
@@ -258,7 +258,7 @@ class Ad_Widget {
 	 *
 	 * @var      string
 	 */
-	protected $plugin_slug = 'ad-widget';
+	protected $plugin_slug = 'hihat-ad-widget';
 
 	/**
 	 * Instance of this class.
