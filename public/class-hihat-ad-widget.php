@@ -1,6 +1,6 @@
 <?php
 /**
- * Ad Widget
+ * Hi-hat Ad Widget
  *
  * @package   Hihat_Ad_Widget
  * @author    Mike Turner <turner.mike@gmail.com>
@@ -172,6 +172,8 @@ class Hihat_Ad_Widget_Widget extends WP_Widget{
 	 */
 	private function get_image_html( $instance, $include_link = true ) {
 
+		$output = '';
+
 		// If there is an image_url, use it to render the image. Eventually we should kill this and simply rely on attachment_ids.
 		if ( !empty( $instance['image_url'] ) ) {
 			// If all we have is an image src url we can still render an image.
@@ -186,7 +188,7 @@ class Hihat_Ad_Widget_Widget extends WP_Widget{
 				$output .= sprintf( ' %s="%s"', $name, $value );
 			}
 			$output .= ' />';
-		} elseif( abs( $instance['attachment_id'] ) > 0 ) {
+		} elseif( isset( $instance['attachment_id'] ) && abs( $instance['attachment_id'] ) > 0 ) {
 			$output .= wp_get_attachment_image($instance['attachment_id'], $size, false, $attr);
 		}
 

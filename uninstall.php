@@ -2,7 +2,7 @@
 /**
  * Fired when the plugin is uninstalled.
  *
- * Ad Widget
+ * Hi-hat Ad Widget
  *
  * @package   Hihat_Ad_Widget
  * @author    Mike Turner <turner.mike@gmail.com>

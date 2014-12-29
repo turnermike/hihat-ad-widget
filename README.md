@@ -12,7 +12,8 @@ All of the following fields are optional:
 
 ## To-do
 
-1. Update Readme
+1. Update Readme with expected functionality.
+2. Tidy-up the JS.
 
 ---
 Developed by [Hi-hat Consulting](http://hi-hatconsulting.com)

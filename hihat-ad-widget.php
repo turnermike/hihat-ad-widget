@@ -1,6 +1,6 @@
 <?php
 /**
- * Ad Widget
+ * Hi-hat Ad Widget
  *
  * @package   Hihat_Ad_Widget
  * @author    Mike Turner <turner.mike@gmail.com>
