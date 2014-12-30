@@ -83,7 +83,7 @@ class Hihat_Ad_Widget_Widget extends WP_Widget{
 		<!-- image -->
 		<div class="uploader">
 		<p>
-		<input type="submit" class="button" name="<?php echo $this->get_field_name('uploader_button'); ?>" id="<?php echo $this->get_field_id('uploader_button'); ?>" value="<?php _e('Select an Image', ''); ?>" onclick="imageWidget.uploader( '<?php echo $this->id; ?>', '<?php echo $id_prefix; ?>' ); return false;" />
+		<input type="submit" class="button" name="<?php echo $this->get_field_name('uploader_button'); ?>" id="<?php echo $this->get_field_id('uploader_button'); ?>" value="<?php _e('Select an Image', 'hihat-ad-widget'); ?>" onclick="imageWidget.uploader( '<?php echo $this->id; ?>' ); return false;" />
 		</p>
 		<div id="<?php echo $this->get_field_id('preview'); ?>" class="preview">
 			<p><?php echo $this->get_image_html($instance, false); ?></p>
@@ -285,12 +285,12 @@ class Hihat_Ad_Widget {
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 
-		if ( $this->use_old_uploader() ) {
-			require_once( 'lib/ImageWidgetDeprecated.php' );
-			new ImageWidgetDeprecated( $this );
-		} else {
+		// if ( $this->use_old_uploader() ) {
+		// 	require_once( 'lib/ImageWidgetDeprecated.php' );
+		// 	new ImageWidgetDeprecated( $this );
+		// } else {
 			add_action( 'sidebar_admin_setup', array( $this, 'admin_setup' ) );
-		}
+		// }
 	}
 
 	/**
@@ -307,9 +307,9 @@ class Hihat_Ad_Widget {
 	 */
 	function admin_setup() {
 		wp_enqueue_media();
-		wp_enqueue_script( 'tribe-image-widget', plugins_url('/js/image-widget.js', __FILE__), array( 'jquery', 'media-upload', 'media-views' ), self::VERSION );
+		wp_enqueue_script( 'image-widget', plugins_url('/js/image-widget.js', __FILE__), array( 'jquery', 'media-upload', 'media-views' ), self::VERSION );
 
-		wp_localize_script( 'tribe-image-widget', 'TribeImageWidget', array(
+		wp_localize_script( 'image-widget', 'imageWidget', array(
 			'frame_title' => __( 'Select an Image', 'image_widget' ),
 			'button_title' => __( 'Insert Into Widget', 'image_widget' ),
 		) );
