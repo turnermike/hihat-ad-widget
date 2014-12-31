@@ -8,6 +8,7 @@
  * @link      http://hi-hatconsulting.com
  * @copyright 2014 Hi-hat Consulting
  *
+ *
  * @wordpress-plugin
  * Plugin Name:       Hi-hat Ad Widget
  * Plugin URI:        http://hi-hatconsulting.com
