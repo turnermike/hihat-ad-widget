@@ -2,21 +2,21 @@
 /**
  * Hi-hat Ad Widget
  *
- * @package   Hihat_Ad_Widget
+ * @package   Hi_Hat_Ad_Widget
  * @author    Mike Turner <turner.mike@gmail.com>
  * @license   GPL-2.0+
  * @link      http://hi-hatconsulting.com
  * @copyright 2014 Hi-hat Consulting
  */
 
-class Hihat_Ad_Widget_Widget extends WP_Widget{
+class Hi_Hat_Ad_Widget_Widget extends WP_Widget{
 
 	//constructor
-	function Hihat_Ad_Widget_Widget(){
+	function Hi_Hat_Ad_Widget_Widget(){
 
-		$name = __('Hi-hat Ad Widget', 'hihat-ad-widget');
-		$desc = __('This widget  will allow you to display custom ads on your widget enabled sidebars.', 'hihat-ad-widget');
-		$class_name = 'hihat-ad-widget';
+		$name = __('Hi-hat Ad Widget', 'hi-hat-ad-widget');
+		$desc = __('This widget  will allow you to display custom ads on your widget enabled sidebars.', 'hi-hat-ad-widget');
+		$class_name = 'hi-hat-ad-widget';
 		parent::WP_Widget(false, $name, array('classname' => $class_name, 'description' => $desc));
 	}
 
@@ -62,28 +62,28 @@ class Hihat_Ad_Widget_Widget extends WP_Widget{
 
 		<!-- title -->
 		<p>
-		<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'hihat-ad-widget'); ?></label>
+		<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'hi-hat-ad-widget'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 		</p>
 		<!-- desc -->
 		<p>
-		<label for="<?php echo $this->get_field_id('desc'); ?>"><?php _e('Description', 'hihat-ad-widget'); ?></label>
+		<label for="<?php echo $this->get_field_id('desc'); ?>"><?php _e('Description', 'hi-hat-ad-widget'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('desc'); ?>" name="<?php echo $this->get_field_name('desc'); ?>" type="text" value="<?php echo $desc; ?>" />
 		</p>
 		<!-- link target url -->
 		<p>
-		<label for="<?php echo $this->get_field_id('target_url'); ?>"><?php _e('Link Target URL', 'hihat-ad-widget'); ?></label>
+		<label for="<?php echo $this->get_field_id('target_url'); ?>"><?php _e('Link Target URL', 'hi-hat-ad-widget'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('target_url'); ?>" name="<?php echo $this->get_field_name('target_url'); ?>" type="text" value="<?php echo $target_url; ?>" />
 		</p>
 		<!-- alt text -->
 		<p>
-		<label for="<?php echo $this->get_field_id('alt_text'); ?>"><?php _e('Alternate Text', 'hihat-ad-widget'); ?></label>
+		<label for="<?php echo $this->get_field_id('alt_text'); ?>"><?php _e('Alternate Text', 'hi-hat-ad-widget'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('alt_text'); ?>" name="<?php echo $this->get_field_name('alt_text'); ?>" type="text" value="<?php echo $alt_text; ?>" />
 		</p>
 		<!-- image -->
 		<div class="uploader">
 		<p>
-		<input type="submit" class="button" name="<?php echo $this->get_field_name('uploader_button'); ?>" id="<?php echo $this->get_field_id('uploader_button'); ?>" value="<?php _e('Select an Image', 'hihat-ad-widget'); ?>" onclick="imageWidget.uploader( '<?php echo $this->id; ?>' ); return false;" />
+		<input type="submit" class="button" name="<?php echo $this->get_field_name('uploader_button'); ?>" id="<?php echo $this->get_field_id('uploader_button'); ?>" value="<?php _e('Select an Image', 'hi-hat-ad-widget'); ?>" onclick="imageWidget.uploader( '<?php echo $this->id; ?>' ); return false;" />
 		</p>
 		<div id="<?php echo $this->get_field_id('preview'); ?>" class="preview">
 			<p><?php echo $this->get_image_html($instance, false); ?></p>
@@ -97,7 +97,7 @@ class Hihat_Ad_Widget_Widget extends WP_Widget{
 			if($new_window === 'true'){ $checked = ' checked="checked"'; }
 		?>
 		<p>
-		<label for="<?php echo $this->get_field_id('new_window'); ?>"><?php _e('Open Link In New Window', 'hihat-ad-widget'); ?><br />
+		<label for="<?php echo $this->get_field_id('new_window'); ?>"><?php _e('Open Link In New Window', 'hi-hat-ad-widget'); ?><br />
 		<input type="checkbox"  id="<?php echo $this->get_field_id('new_window'); ?>" name="<?php echo $this->get_field_name('new_window'); ?>" <?php echo $checked; ?>></label>
 		</p>
 		<p>This widget is used to display custom ad content. All fields are optional.</p>
@@ -219,7 +219,7 @@ class Hihat_Ad_Widget_Widget extends WP_Widget{
 
 }
 
-add_action('widgets_init', create_function('', 'return register_widget("Hihat_Ad_Widget_Widget");'));
+add_action('widgets_init', create_function('', 'return register_widget("Hi_Hat_Ad_Widget_Widget");'));
 
 
 
@@ -233,10 +233,10 @@ add_action('widgets_init', create_function('', 'return register_widget("Hihat_Ad
  *
  * @TODO: Rename this class to a proper name for your plugin.
  *
- * @package Hihat_Ad_Widget
+ * @package Hi_Hat_Ad_Widget
  * @author  Your Name <email@example.com>
  */
-class Hihat_Ad_Widget {
+class Hi_Hat_Ad_Widget {
 
 	/**
 	 * Plugin version, used for cache-busting of style and script file references.
@@ -260,7 +260,7 @@ class Hihat_Ad_Widget {
 	 *
 	 * @var      string
 	 */
-	protected $plugin_slug = 'hihat-ad-widget';
+	protected $plugin_slug = 'hi-hat-ad-widget';
 
 	/**
 	 * Instance of this class.
