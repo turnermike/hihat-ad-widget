@@ -14,6 +14,7 @@ All of the following fields are optional:
 
 1. Update Readme with expected functionality.
 2. Tidy-up the JS.
+3. Restrict non-image file types for uploader.
 
 ---
 Developed by [Hi-hat Consulting](http://hi-hatconsulting.com)
